@@ -1746,16 +1746,13 @@ section {
 
 .navbar ul li ul.dropdown-menu {
     display: none;
+    /* Sembunyikan menu dropdown secara default */
     position: absolute;
     top: 100%;
     left: 0;
     background-color: white;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
     z-index: 99;
-}
-
-.navbar ul li:hover ul.dropdown-menu {
-    display: block;
 }
 
 .navbar ul li ul.dropdown-menu li {
@@ -1812,4 +1809,28 @@ section {
 .hero-image img {
     border-radius: 10px;
     object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar .dropdown-menu {
+        display: none;
+        /* Pastikan menu dropdown tidak ditampilkan secara default */
+        position: static;
+        /* Sesuaikan posisi dropdown untuk mobile */
+        background-color: white;
+        box-shadow: none;
+    }
+    .navbar .dropdown-menu.dropdown-active {
+        display: block;
+        /* Tampilkan menu dropdown saat aktif */
+    }
+    .navbar .dropdown>a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
