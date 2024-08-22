@@ -92,25 +92,6 @@
     });
 
     /**
-     * Toggle mobile nav dropdowns
-     */
-    const navDropdowns = document.querySelectorAll('.navbar .dropdown > a');
-
-    navDropdowns.forEach(el => {
-        el.addEventListener('click', function(event) {
-            if (document.querySelector('.mobile-nav-active')) {
-                event.preventDefault();
-                this.classList.toggle('active');
-                this.nextElementSibling.classList.toggle('dropdown-active');
-
-                let dropDownIndicator = this.querySelector('.dropdown-indicator');
-                dropDownIndicator.classList.toggle('bi-chevron-up');
-                dropDownIndicator.classList.toggle('bi-chevron-down');
-            }
-        })
-    });
-
-    /**
      * Scroll top button
      */
     const scrollTop = document.querySelector('.scroll-top');
@@ -240,4 +221,45 @@
         aos_init();
     });
 
+    /**
+     * Toggle dropdown menu on click for mobile
+     */
+    const navDropdowns = document.querySelectorAll('.navbar .dropdown > a');
+
+    navDropdowns.forEach(el => {
+        el.addEventListener('click', function(event) {
+            event.preventDefault(); // Mencegah aksi default link
+
+            // Toggle tampilan dropdown menu
+            const dropdownMenu = this.nextElementSibling;
+            dropdownMenu.classList.toggle('dropdown-active');
+
+            // Toggle indikator dropdown (jika ada)
+            let dropDownIndicator = this.querySelector('.dropdown-indicator');
+            if (dropDownIndicator) {
+                dropDownIndicator.classList.toggle('bi-chevron-up');
+                dropDownIndicator.classList.toggle('bi-chevron-down');
+            }
+        });
+    });
+
+    /**
+     * Hide dropdowns when clicking outside
+     */
+    document.addEventListener('click', function(event) {
+        navDropdowns.forEach(el => {
+            const dropdownMenu = el.nextElementSibling;
+            if (!el.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('dropdown-active');
+                el.classList.remove('active');
+
+                // Hide indicator
+                let dropDownIndicator = el.querySelector('.dropdown-indicator');
+                if (dropDownIndicator) {
+                    dropDownIndicator.classList.remove('bi-chevron-up');
+                    dropDownIndicator.classList.add('bi-chevron-down');
+                }
+            }
+        });
+    });
 })();
