@@ -1953,3 +1953,105 @@ img {
         margin-top: 20px;
     }
 }
+
+
+/* Add this to your main.css file */
+
+
+/* General Styles for Mobile */
+
+body {
+    font-size: 16px;
+}
+
+
+/* Ensure images scale properly */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Responsive Text Sizes */
+
+h1,
+h2,
+h4 {
+    font-size: 1.5rem;
+    /* Adjust for smaller screens */
+}
+
+p {
+    font-size: 1rem;
+    /* Adjust paragraph size for readability on mobile */
+}
+
+
+/* Adjust Section Margins and Padding */
+
+section {
+    padding: 20px 10px;
+}
+
+
+/* Responsive Flex Containers */
+
+.container-xxl {
+    padding: 0 15px;
+    /* Reduce padding on smaller screens */
+}
+
+
+/* Responsive Product Section */
+
+@media (max-width: 767px) {
+    .col-lg-12.d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    .col-lg-4 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .col-lg-8 {
+        text-align: justify;
+        padding: 0 15px;
+    }
+    .btn-book-a-table {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+}
+
+
+/* Responsive Footer */
+
+@media (max-width: 767px) {
+    .footer {
+        text-align: center;
+        padding: 20px;
+    }
+    .footer .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-links {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Navbar Mobile Responsiveness */
+
+@media (max-width: 767px) {
+    #navbar {
+        flex-direction: column;
+    }
+    #navbar ul {
+        flex-direction: column;
+    }
+    .navbar ul li {
+        margin: 10px 0;
+    }
+}
