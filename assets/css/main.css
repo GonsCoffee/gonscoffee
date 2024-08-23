@@ -1813,3 +1813,17 @@ section {
     border-radius: 10px;
     object-fit: cover;
 }
+
+@media (max-width: 768px) {
+    #hero {
+        background-position: top center;
+    }
+
+    .header {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
