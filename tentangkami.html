@@ -44,10 +44,9 @@
             </a>
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="tentangkami.html">Tentang Kami</a></li>
-                    <li><a href="product.html">Produk</a></li>
-                    <!-- <li class="dropdown">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#hero">Tentang Kami</a></li>
+                    <li class="dropdown">
                         <a href="#">
                             Produk <i class="bi bi-chevron-down"></i>
                         </a>
@@ -57,8 +56,8 @@
                             <li><a href="product.html">Sabun Kopi</a></li>
                             <li><a href="product.html">Cascara Tea</a></li>
                         </ul>
-                    </li> -->
-                    <li><a href="index.html#contact">Kontak</a></li>
+                    </li>
+                    <li><a href="home.html#contact">Kontak</a></li>
                 </ul>
             </nav>
             <!-- .navbar -->
@@ -73,35 +72,28 @@
     <!-- Text Section -->
     <section id="hero-text" class="hero-text" style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 200px; background-color: #f8f9fa;">
         <div style="margin-bottom: 50px;">
-            <h1 style="margin: 0; font-size: 3rem; color: #6f4e37;">GON’S COFFEE!</h1>
-            <p style="margin: 0; font-size: 1,5rem;">Semangat Wirausaha, Menuju Desa Luar Biasa!</p>
+            <h1 style="margin: 0; font-size: 4rem; color: #6f4e37;">GON’S COFFEE!</h1>
+            <p style="margin: 0; font-size: 2rem;">Semangat Wirausaha, Menuju Desa Luar Biasa!</p>
         </div>
     </section>
 
     <!-- Image Section -->
-    <section id="hero-image" class="hero-image swiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="assets/img/IMG-20240802-WA0016.jpg" alt="Photo 1" style="width: 100%; height: 500px; object-fit: cover; border-radius: 10px;">
-            </div>
-            <div class="swiper-slide">
-                <img src="assets/img/IMG-20240802-WA0018.jpg" alt="Photo 2" style="width: 100%; height: 500px; object-fit: cover; border-radius: 10px;">
-            </div>
-            <div class="swiper-slide">
-                <img src="assets/img/IMG-20240802-WA0019.jpg" alt="Photo 3" style="width: 100%; height: 500px; object-fit: cover; border-radius: 10px;">
-            </div>
-            <div class="swiper-slide">
-                <img src="assets/img/IMG-20240802-WA0020.jpg" alt="Photo 4" style="width: 100%; height: 500px; object-fit: cover; border-radius: 10px;">
-            </div>
+    <section id="hero-image" class="hero-image" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding: 20px;">
+        <!-- Photo Container -->
+        <div style="flex: 1 1 calc(25% - 20px); max-width: calc(25% - 20px); box-sizing: border-box;">
+            <img src="assets/img/IMG-20240802-WA0016.jpg" alt="Photo 1" style="width: 100%; height: 500px; object-fit: cover; border-radius: 10px;">
         </div>
-        <!-- Add Pagination if needed -->
-        <div class="swiper-pagination"></div>
-        <!-- Add Navigation Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div style="flex: 1 1 calc(25% - 20px); max-width: calc(25% - 20px); box-sizing: border-box;">
+            <img src="assets/img/IMG-20240802-WA0018.jpg" alt="Photo 2" style="width: 100%; height: 500px; object-fit: cover; border-radius: 10px;">
+        </div>
+        <div style="flex: 1 1 calc(25% - 20px); max-width: calc(25% - 20px); box-sizing: border-box;">
+            <img src="assets/img/IMG-20240802-WA0019.jpg" alt="Photo 3" style="width: 100%; height: 500px; object-fit: cover; border-radius: 10px;">
+        </div>
+        <div style="flex: 1 1 calc(25% - 20px); max-width: calc(25% - 20px); box-sizing: border-box;">
+            <img src="assets/img/IMG-20240802-WA0020.jpg" alt="Photo 4" style="width: 100%; height: 500px; object-fit: cover; border-radius: 10px;">
+        </div>
     </section>
     <!-- End Hero Section -->
-
     <main id="main">
         <!-- About Start -->
         <div class="container py-5">
