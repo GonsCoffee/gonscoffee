@@ -1836,25 +1836,23 @@ section {
 }
 
 @media (max-width: 768px) {
-    .product-section .col-lg-4,
-    .product-section .col-lg-8 {
-        display: block;
-        width: 100%;
+    .product-section {
+        display: flex;
+        flex-direction: column;
     }
-    
+
     .product-section .col-lg-4 {
+        order: 1;
         margin-bottom: 20px;
     }
-    
+
     .product-section .col-lg-8 {
-        padding-left: 0;
-        padding-right: 0;
+        order: 2;
     }
-    
+
     .product-section img {
         width: 100%;
         height: auto;
-        margin-bottom: 10px;
     }
 
     .product-section p {
