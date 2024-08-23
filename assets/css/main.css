@@ -1840,23 +1840,161 @@ section {
         display: flex;
         flex-direction: column;
     }
-
     .product-section .col-lg-4 {
         order: 1;
         margin-bottom: 20px;
     }
-
     .product-section .col-lg-8 {
         order: 2;
     }
-
     .product-section img {
         width: 100%;
         height: auto;
     }
-
     .product-section p {
         padding-left: 10px;
         padding-right: 10px;
+    }
+}
+
+
+/* General styles for responsiveness */
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    padding: 15px 0;
+}
+
+h1,
+h2,
+h4,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Ensure images scale properly */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Flexbox layout for product section */
+
+.product-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.product-section img {
+    border-radius: 10px;
+}
+
+
+/* Make product descriptions responsive */
+
+.product-section .col-lg-4,
+.product-section .col-lg-8 {
+    padding: 10px;
+}
+
+.product-section .col-lg-4 {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+
+.product-section .col-lg-8 {
+    flex: 0 0 58%;
+    max-width: 58%;
+}
+
+@media (max-width: 768px) {
+    /* Stack image and description on mobile */
+    .product-section {
+        flex-direction: column;
+    }
+    .product-section .col-lg-4,
+    .product-section .col-lg-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .product-section .col-lg-4 {
+        order: 1;
+    }
+    .product-section .col-lg-8 {
+        order: 2;
+        margin-top: 20px;
+    }
+}
+
+
+/* Navigation adjustments */
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    /* Stack navigation links vertically on mobile */
+    .navbar ul {
+        flex-direction: column;
+    }
+    .navbar ul li {
+        margin: 10px 0;
+    }
+}
+
+
+/* Button adjustments for mobile */
+
+.btn-book-a-table {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+
+/* Footer adjustments */
+
+.footer .row {
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer .row {
+        flex-direction: column;
+    }
+    .footer-links {
+        text-align: center;
     }
 }
