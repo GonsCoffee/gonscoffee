@@ -1834,3 +1834,31 @@ section {
     object-fit: contain;
     /* Preserve aspect ratio, no cropping */
 }
+
+@media (max-width: 768px) {
+    .product-section .col-lg-4,
+    .product-section .col-lg-8 {
+        display: block;
+        width: 100%;
+    }
+    
+    .product-section .col-lg-4 {
+        margin-bottom: 20px;
+    }
+    
+    .product-section .col-lg-8 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .product-section img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .product-section p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
