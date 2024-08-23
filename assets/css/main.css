@@ -1814,44 +1814,23 @@ section {
     object-fit: cover;
 }
 
-@media (max-width: 768px) {
-    .col-lg-4 img {
-        width: 100%;
-        /* Pastikan gambar mengisi seluruh lebar kolom di layar kecil */
-        height: auto;
-        /* Sesuaikan tinggi otomatis */
-        margin-bottom: 15px;
-        /* Berikan jarak bawah pada gambar */
-    }
-    .col-lg-8 {
-        padding-left: 15px;
-        /* Berikan padding pada teks untuk jarak yang lebih baik dari gambar */
-    }
-    .row.g-5 {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    /* Optional: Tambahkan margin bawah pada teks agar tidak terlalu mepet dengan elemen berikutnya */
-    .col-lg-8 p {
-        margin-bottom: 20px;
-    }
+#hero-image {
+    width: 100%;
+    height: auto;
+    /* Auto height for responsiveness */
 }
 
-@media (max-width: 768px) {
-    .d-flex {
-        flex-direction: column;
-        /* Susun elemen secara vertikal pada layar kecil */
-        align-items: center;
-        /* Rata tengah untuk elemen di layar kecil */
-    }
-    .col-lg-4 {
-        margin-bottom: 20px;
-        /* Berikan jarak antara gambar dan teks */
-    }
-    .col-lg-8 {
-        text-align: center;
-        /* Pusatkan teks di layar kecil untuk estetika yang lebih baik */
-        padding: 0 10px;
-        /* Tambahkan padding untuk membuat jarak lebih nyaman */
-    }
+#hero-image .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-image .swiper-slide img {
+    width: auto;
+    /* Allow dynamic width */
+    height: 100%;
+    /* Make sure the height fits the container */
+    object-fit: contain;
+    /* Preserve aspect ratio, no cropping */
 }
