@@ -1902,14 +1902,20 @@ img {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 40px;
+    align-items: center;
+    /* Align items vertically in the center */
 }
 
 .product-section img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    /* Set a max-width to prevent images from becoming too large */
+    margin: 0 auto;
+    display: block;
+    /* Center the image within the column */
     border-radius: 10px;
 }
-
-
-/* Make product descriptions responsive */
 
 .product-section .col-lg-4,
 .product-section .col-lg-8 {
@@ -1930,71 +1936,20 @@ img {
     /* Stack image and description on mobile */
     .product-section {
         flex-direction: column;
+        align-items: flex-start;
     }
     .product-section .col-lg-4,
     .product-section .col-lg-8 {
         flex: 0 0 100%;
         max-width: 100%;
     }
-    .product-section .col-lg-4 {
-        order: 1;
+    .product-section .col-lg-4 img {
+        width: 100%;
+        /* Make sure image takes full width of its container */
+        max-width: none;
+        /* Remove max-width restriction on mobile */
     }
     .product-section .col-lg-8 {
-        order: 2;
         margin-top: 20px;
-    }
-}
-
-
-/* Navigation adjustments */
-
-.navbar ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.navbar ul li {
-    margin-right: 20px;
-}
-
-@media (max-width: 768px) {
-    /* Stack navigation links vertically on mobile */
-    .navbar ul {
-        flex-direction: column;
-    }
-    .navbar ul li {
-        margin: 10px 0;
-    }
-}
-
-
-/* Button adjustments for mobile */
-
-.btn-book-a-table {
-    font-size: 1rem;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-
-/* Footer adjustments */
-
-.footer .row {
-    flex-wrap: wrap;
-}
-
-.footer-links {
-    margin-bottom: 20px;
-}
-
-@media (max-width: 768px) {
-    .footer .row {
-        flex-direction: column;
-    }
-    .footer-links {
-        text-align: center;
     }
 }
