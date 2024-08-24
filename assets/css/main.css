@@ -1877,3 +1877,14 @@ section {
         padding: 40px 20px;
     }
 }
+
+@media (max-width: 767px) {
+        #header {
+            padding-top: 20px; /* Adds space above the header */
+        }
+
+        #hero-text {
+            padding-top: 100px;
+            padding-bottom: 0;
+        }
+    }
